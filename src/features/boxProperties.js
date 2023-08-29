@@ -38,7 +38,11 @@ export const boxProperties = createSlice({
     name: "boxProperties",
     initialState,
     reducers: {
-        updateBoxPropertiesValue: (state, action) => {},
+        updateBoxPropertiesValue: (state, action) => {
+            state.find(
+                (e) => e.inputNumber === action.payload.inputNumber
+            ).value = action.payload.value;
+        },
     },
 });
 

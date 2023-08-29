@@ -1,5 +1,7 @@
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
+import { LeftContainer } from "./layouts/LeftContainer";
+import { RightContainer } from "./layouts/RightContainer";
 
 const App = () => {
     return (
@@ -8,9 +10,9 @@ const App = () => {
                 <Header />
             </header>
 
-            <main className="flex flex-wrap flex-grow justify-center items-center bg-gray-300 px-10 md:flex-nowrap">
-                <p>Ici la box de gauche</p>
-                <p>Ici la box de droite</p>
+            <main className="flex flex-wrap flex-grow justify-center items-center bg-gray-200 px-10 md:flex-nowrap">
+                <LeftContainer />
+                <RightContainer />
             </main>
 
             <footer>

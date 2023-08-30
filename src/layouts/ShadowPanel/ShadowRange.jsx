@@ -16,7 +16,7 @@ export const ShadowRange = ({ inputData, shadowID }) => {
 
     return (
         <div className="my-4">
-            <div className="flex justify-between">
+            <div className="flex justify-between items-baseline">
                 <p>{inputData.name}</p>
                 <div className="flex items-baseline gap-2 mb-2">
                     <input

@@ -44,7 +44,7 @@ export const LeftContainer = () => {
                     </>
                 ))}
             </div>
-            <div className="">{tabsData[selectedTab].component}</div>
+            <div className="h-full overflow-auto">{tabsData[selectedTab].component}</div>
         </div>
     );
 };

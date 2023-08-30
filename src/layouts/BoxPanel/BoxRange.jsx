@@ -15,7 +15,7 @@ export const BoxRange = ({ inputData }) => {
 
     return (
         <div className="my-8">
-            <div className="flex justify-between">
+            <div className="flex justify-between items-baseline">
                 <p>{inputData.name}</p>
                 <div className="flex items-baseline gap-2 mb-2">
                     <input

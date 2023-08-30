@@ -64,14 +64,20 @@ export const Shadow = ({ shadowPanel, shadow }) => {
 
             {toggleBtn && (
                 <>
-                    <div className="flex justify-between px-6 py-1">
+                    <div className="flex justify-between items-baseline px-6">
                         <div className="flex">
-                            <ShadowCheckbox />
-                            <ShadowCheckbox />
+                            <ShadowCheckbox
+                                name={"active"}
+                                shadowID={shadow.id}
+                            />
+                            <ShadowCheckbox
+                                name={"inset"}
+                                shadowID={shadow.id}
+                            />
                         </div>
                         <button
                             onClick={() => dispatch(removeShadow())}
-                            className="mt-4 bg-red-600 hover:bg-red-700 px-6 py-1 text-white self-center rounded"
+                            className="mt-4 bg-red-600 hover:bg-red-700 px-6 py-1 text-white rounded"
                         >
                             Remove
                         </button>

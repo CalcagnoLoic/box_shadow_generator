@@ -148,7 +148,14 @@ export const shadows = createSlice({
             currentInput.value = action.payload.value;
         },
 
-        updateCheckbox: (state, action) => {},
+        updateCheckbox: (state, action) => {
+            const currentShadowID = state.find(
+                (shadow) => shadow.id === action.payload.shadowID
+            );
+
+            currentShadowID[action.payload.name] =
+                !currentShadowID[action.payload.name];
+        },
     },
 });
 

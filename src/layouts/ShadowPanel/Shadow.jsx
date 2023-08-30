@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeProvider";
 import chevron from "../../assets/chevron.svg";
-import { Checkbox } from "../../components/Checkbox";
+import { ShadowCheckbox } from "./ShadowCheckbox";
 import { removeShadow } from "../../features/shadows";
 import { useDispatch } from "react-redux";
 import { ShadowRange } from "./ShadowRange";
@@ -47,9 +47,7 @@ export const Shadow = ({ shadowPanel, shadow }) => {
         >
             <button
                 onClick={() => setToggleBtn(!toggleBtn)}
-                className={`${
-                    darkMode ? "hover:bg-gray-100" : "hover:bg-gray-100"
-                } flex w-full px-6 py-4 justify-between items-center cursor-pointer`}
+                className="flex w-full px-6 py-4 justify-between items-center cursor-pointer hover:bg-gray-100"
             >
                 <p>Shadow {shadowPanel}</p>
                 <img
@@ -66,12 +64,15 @@ export const Shadow = ({ shadowPanel, shadow }) => {
 
             {toggleBtn && (
                 <>
-                    <div className="flex justify-between px-6 py-4">
+                    <div className="flex justify-between px-6 py-1">
                         <div className="flex">
-                            <Checkbox />
-                            <Checkbox />
+                            <ShadowCheckbox />
+                            <ShadowCheckbox />
                         </div>
-                        <button className="mt-4 bg-red-600 hover:bg-red-700 px-6 py-2 text-white self-center rounded">
+                        <button
+                            onClick={() => dispatch(removeShadow())}
+                            className="mt-4 bg-red-600 hover:bg-red-700 px-6 py-1 text-white self-center rounded"
+                        >
                             Remove
                         </button>
                     </div>

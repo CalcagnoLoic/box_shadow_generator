@@ -29,10 +29,17 @@ const initialState = [
                 value: 0,
             },
             {
+                inputNumber: 4,
+                name: "Spread Radius",
+                type: "range",
+                minMax: [0, 250],
+                value: 0,
+            },
+            {
                 inputNumber: 5,
                 name: "Color",
                 type: "color",
-                value: "#000",
+                value: "#fff",
             },
         ],
     },
@@ -70,16 +77,77 @@ export const shadows = createSlice({
                         value: 0,
                     },
                     {
+                        inputNumber: 4,
+                        name: "Spread Radius",
+                        type: "range",
+                        minMax: [0, 250],
+                        value: 0,
+                    },
+                    {
                         inputNumber: 5,
                         name: "Color",
                         type: "color",
-                        value: "#000",
+                        value: "#fff",
                     },
                 ],
             });
         },
-        removeShadow: (state, action) => {},
-        updateValueShadow: (state, action) => {},
+
+        removeShadow: (state, action) => {
+            state.pop({
+                id: nanoid(5),
+                active: true,
+                inset: false,
+                inputs: [
+                    {
+                        inputNumber: 1,
+                        name: "Horizontal offset",
+                        type: "range",
+                        minMax: [-250, 250],
+                        value: 0,
+                    },
+                    {
+                        inputNumber: 2,
+                        name: "Vertical offset",
+                        type: "range",
+                        minMax: [-250, 250],
+                        value: 0,
+                    },
+                    {
+                        inputNumber: 3,
+                        name: "Blur radius",
+                        type: "range",
+                        minMax: [0, 250],
+                        value: 0,
+                    },
+                    {
+                        inputNumber: 4,
+                        name: "Spread Radius",
+                        type: "range",
+                        minMax: [0, 250],
+                        value: 0,
+                    },
+                    {
+                        inputNumber: 5,
+                        name: "Color",
+                        type: "color",
+                        value: "#fff",
+                    },
+                ],
+            });
+        },
+
+        updateValueShadow: (state, action) => {
+            const currentShadowID = state.find(
+                (shadow) => shadow.id === action.payload.shadowID
+            );
+            const currentInput = currentShadowID.inputs.find(
+                (input) => input.inputNumber === action.payload.inputNumber
+            );
+
+            currentInput.value = action.payload.value;
+        },
+
         updateCheckbox: (state, action) => {},
     },
 });

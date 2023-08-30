@@ -13,7 +13,7 @@ export const BoxColorPicker = ({ inputData }) => {
         );
     };
     return (
-        <div>
+        <>
             <p className="mb-2">{inputData.name}</p>
             <div className="flex">
                 <input
@@ -29,6 +29,6 @@ export const BoxColorPicker = ({ inputData }) => {
                     onChange={handleInput}
                 />
             </div>
-        </div>
+        </>
     );
 };

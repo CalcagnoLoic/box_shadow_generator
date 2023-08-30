@@ -38,7 +38,7 @@ const initialState = [
     },
 ];
 
-export const shadow = createSlice({
+export const shadows = createSlice({
     name: "shadows",
     initialState,
     reducers: {
@@ -85,5 +85,5 @@ export const shadow = createSlice({
 });
 
 export const { addShadow, removeShadow, updateValueShadow, updateCheckbox } =
-    shadow.actions;
-export default shadow.reducer;
+    shadows.actions;
+export default shadows.reducer;

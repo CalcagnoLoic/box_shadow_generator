@@ -7,7 +7,6 @@ const initialState = [
         value: 0,
         minMax: [0, 250],
         type: "range",
-        slice: "boxProperties",
     },
     {
         inputNumber: 2,
@@ -15,7 +14,6 @@ const initialState = [
         value: 0,
         minMax: [0, 500],
         type: "range",
-        slice: "boxProperties",
     },
     {
         inputNumber: 3,
@@ -23,14 +21,12 @@ const initialState = [
         value: 0,
         minMax: [0, 500],
         type: "range",
-        slice: "boxProperties",
     },
     {
         inputNumber: 4,
         name: "Background color",
-        value: "#000",
+        value: "#fff",
         type: "color",
-        slice: "boxProperties",
     },
 ];
 

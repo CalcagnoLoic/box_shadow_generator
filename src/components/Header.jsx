@@ -14,7 +14,7 @@ export const Header = () => {
             } py-5 border-b-2 flex flex-col justify-center items-center`}
         >
             <h1 className="text-center text-2xl uppercase font-semibold">
-                Boxy Generator
+                Box-shadow Generator
             </h1>
             <ToggleBtnDarkMode />
         </div>

@@ -27,7 +27,7 @@ export const LeftContainer = () => {
                     : "bg-white border-slate-400"
             } relative  h-[550px] w-[600px] mt-20 md:mt-10 rounded-b rounded-tr shadow-xl border-2 `}
         >
-            <div className="flex absolute -translate-y-full -left-[2px] lg:-left-[1.5px]">
+            <div className="flex absolute -translate-y-full -left-[2px]">
                 {tabsData.map((obj, index) => (
                     <>
                         <button

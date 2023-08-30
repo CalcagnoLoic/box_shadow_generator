@@ -39,7 +39,7 @@ const initialState = [
                 inputNumber: 5,
                 name: "Color",
                 type: "color",
-                value: "#fff",
+                value: "#000",
             },
         ],
     },
@@ -87,7 +87,7 @@ export const shadows = createSlice({
                         inputNumber: 5,
                         name: "Color",
                         type: "color",
-                        value: "#fff",
+                        value: "#000",
                     },
                 ],
             });

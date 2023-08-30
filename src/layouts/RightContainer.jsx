@@ -1,3 +1,5 @@
+import { Visualisation } from "./Visualisation/Visualisation";
+
 export const RightContainer = () => {
-    return <div>RightContainer</div>;
+    return <Visualisation />;
 };

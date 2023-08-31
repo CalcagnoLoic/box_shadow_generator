@@ -7,7 +7,7 @@
 </h2>
 
 <p align="center">
-    <a href="https://github.com/CalcagnoLoic"> View Demo 
+    <a href="https://calcagnoloic.github.io/box_shadow_generator/"> View Demo 
 
 </p>
 

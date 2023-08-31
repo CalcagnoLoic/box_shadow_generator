@@ -7,9 +7,9 @@ export const Footer = () => {
         <div
             className={`${
                 darkMode
-                    ? "bg-slate-700 text-white border-slate-100"
+                    ? "bg-slate-700 text-white border-slate-300"
                     : "bg-white border-slate-600"
-            } p-3 border-t-2 border-slate-600`}
+            } p-3 border-t-2`}
         >
             <p className="text-center font-semibold">
                 <span>

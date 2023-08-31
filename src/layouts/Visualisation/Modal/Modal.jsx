@@ -18,7 +18,7 @@ export const Modal = ({ closeModal }) => {
     const handleCopy = (e) => {
         if (!runAnimationForCopyBtn) {
             runAnimationForCopyBtn = true;
-            e.target.textContent = "Copied !";
+            e.target.textContent = "Copied!";
 
             setTimeout(() => {
                 runAnimationForCopyBtn = false;
@@ -46,18 +46,18 @@ export const Modal = ({ closeModal }) => {
                         <IconContext.Provider
                             value={{ color: "blue", size: "1.2em" }}
                         >
-                            <FaCss3Alt className="self-center ml-1" />
+                            <FaCss3Alt className="self-center ml-1 hidden sm:visible" />
                         </IconContext.Provider>
                     </p>
-                    <div className="flex ">
+                    <div className="flex items-baseline">
                         <button
-                            className="rounded bg-blue-600 hover:bg-blue-700 px-3 py-1 text-white text-sm mr-2 ml-auto"
+                            className="rounded bg-blue-600 hover:bg-blue-700 px-3 py-1 text-white text-sm mr-2 ml-auto self-center"
                             onClick={handleCopy}
                         >
                             Copy
                         </button>
                         <button
-                            className="rounded bg-red-600 hover:bg-red-700 px-3 py-1 text-white text-sm"
+                            className="rounded bg-red-600 hover:bg-red-700 px-3 py-1 text-white text-sm self-center"
                             onClick={closeModal}
                         >
                             Close

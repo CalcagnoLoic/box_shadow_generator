@@ -46,7 +46,7 @@ export const Modal = ({ closeModal }) => {
                         <IconContext.Provider
                             value={{ color: "blue", size: "1.2em" }}
                         >
-                            <FaCss3Alt className="self-center ml-1 hidden sm:visible" />
+                            <FaCss3Alt className="self-center ml-1 hidden sm:block" />
                         </IconContext.Provider>
                     </p>
                     <div className="flex items-baseline">
